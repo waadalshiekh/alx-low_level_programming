@@ -1,26 +1,27 @@
-#include "main.h"
+/*
+ * File: 101-natural.c
+ * Auth: Brennan D Baraban
+ */
+
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Return: 0 is success
+ * main - Lists all the natural numbers below 1024 (excluded)
+ *        that are multiples of 3 or 5.
+ *
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	int i , s;
+	int i, sum = 0;
 
-	for (i = 1; i < 1024; i++)
+	for (i = 0; i < 1024; i++)
 	{
-		if (i % 3 == 0 || i % 5 == 0)
-		{
-			int sum = 0;
-			sum = sum + i;
-			return sum;
-		}
+		if ((i % 3) == 0 || (i % 5) == 0)
+			sum += i;
 	}
 
-	s = sum;
-	printf("%d\n", s);
+	printf("%d\n", sum);
+
 	return (0);
 }
